@@ -1,0 +1,19 @@
+{
+  "name": "@hug.reed/jfb-editor",
+  "version": "1.0.0",
+  "description": "Components & helpful functions for Gutenberg editor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/girafffee/jfb-editor.git"
+  },
+  "author": "Oleksandr Ivanenko <sanko200065@gmail.com>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/girafffee/jfb-editor/issues"
+  },
+  "homepage": "https://github.com/girafffee/jfb-editor#readme"
+}
