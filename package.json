@@ -1,6 +1,6 @@
 {
   "name": "jfb-editor",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Components & helpful functions for Gutenberg editor",
   "main": "./src/index.js",
   "scripts": {
@@ -23,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/girafffee/jfb-editor/issues"
   },
-  "homepage": "https://github.com/girafffee/jfb-editor#readme"
+  "homepage": "https://github.com/girafffee/jfb-editor#readme",
+  "dependencies": {
+    "@wordpress/components": "^12.0.7",
+    "@wordpress/element": "^2.19.1",
+    "@wordpress/i18n": "^3.18.0"
+  }
 }

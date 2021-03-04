@@ -1,20 +1,14 @@
-
-const { __ } = wp.i18n;
-
-const {
+import { __ } from '@wordpress/i18n';
+import {
 	Button,
 	ButtonGroup,
 	Card,
 	CardBody,
 	CardHeader,
 	ToggleControl,
-} = wp.components;
+} from '@wordpress/components';
 
-const {
-	useState,
-	useEffect
-} = wp.element;
-
+import { useState, useEffect } from '@wordpress/element';
 
 function RepeaterWithState( {
 								children,
