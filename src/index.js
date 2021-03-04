@@ -1,3 +1,5 @@
 import RepeaterWithState from "./components/RepeaterWithState";
 
-module.exports = () => ( { RepeaterWithState } );
+const Components = { RepeaterWithState };
+
+export { Components };

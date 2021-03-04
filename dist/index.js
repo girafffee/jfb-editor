@@ -86,17 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "../node_modules/webpack/buildin/harmony-module.js":
-/*!*********************************************************!*\
-  !*** ../node_modules/webpack/buildin/harmony-module.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("module.exports = function(originalModule) {\n\tif (!originalModule.webpackPolyfill) {\n\t\tvar module = Object.create(originalModule);\n\t\t// module.parent = undefined by default\n\t\tif (!module.children) module.children = [];\n\t\tObject.defineProperty(module, \"loaded\", {\n\t\t\tenumerable: true,\n\t\t\tget: function() {\n\t\t\t\treturn module.l;\n\t\t\t}\n\t\t});\n\t\tObject.defineProperty(module, \"id\", {\n\t\t\tenumerable: true,\n\t\t\tget: function() {\n\t\t\t\treturn module.i;\n\t\t\t}\n\t\t});\n\t\tObject.defineProperty(module, \"exports\", {\n\t\t\tenumerable: true\n\t\t});\n\t\tmodule.webpackPolyfill = 1;\n\t}\n\treturn module;\n};\n\n\n//# sourceURL=webpack:///../node_modules/webpack/buildin/harmony-module.js?");
-
-/***/ }),
-
 /***/ "./components/RepeaterWithState.js":
 /*!*****************************************!*\
   !*** ./components/RepeaterWithState.js ***!
@@ -113,11 +102,11 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction _slicedToArray(arr, 
 /*!******************!*\
   !*** ./index.js ***!
   \******************/
-/*! no exports provided */
+/*! exports provided: Components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var _components_RepeaterWithState__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/RepeaterWithState */ \"./components/RepeaterWithState.js\");\n\n\nmodule.exports = function () {\n  return {\n    RepeaterWithState: _components_RepeaterWithState__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\n  };\n};\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/webpack/buildin/harmony-module.js */ \"../node_modules/webpack/buildin/harmony-module.js\")(module)))\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Components\", function() { return Components; });\n/* harmony import */ var _components_RepeaterWithState__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/RepeaterWithState */ \"./components/RepeaterWithState.js\");\n\nvar Components = {\n  RepeaterWithState: _components_RepeaterWithState__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\n};\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ })
 
