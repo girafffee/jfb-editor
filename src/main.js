@@ -1,5 +1,5 @@
-import RepeaterWithState from "./components/RepeaterWithState";
+import EditorData from "./actions/EditorData";
 
-const Components = { RepeaterWithState };
+const Actions = { EditorData };
 
-export { Components };
+export { Actions };

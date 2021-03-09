@@ -5,11 +5,11 @@ module.exports = {
 	name: 'js_bundle',
 	context: path.resolve(__dirname, 'src'),
 	entry: {
-		'main.js': './main.js',
+		'main': './main.js',
 	},
 	output: {
 		path: path.resolve( __dirname, 'dist' ),
-		filename: '[name]'
+		filename: '[name].js'
 	},
 	resolve: {
 		modules: [
