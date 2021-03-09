@@ -11,6 +11,8 @@ class EditorData {
 
 	setSource( config ) {
 		this.source = config;
+
+		return this;
 	}
 
 	setLabels( config ) {
