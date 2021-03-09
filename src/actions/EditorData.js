@@ -40,10 +40,9 @@ class EditorData {
 	}
 
 	exportAll() {
-		window.jetFormActionTypes[ this.type ] = {
-			...( window.jetFormActionTypes[ this.type ] || {} ),
-			name: this.label
-		};
+		if ( ! ( 'jetFormActionTypes' in window ) ) {
+			window.jetFormActionTypes = [];
+		}
 
 		const source = this.source;
 		const label = this.exportLabels();
@@ -51,7 +50,15 @@ class EditorData {
 		const gatewayAttrs = this.exportGatewayAttrs();
 		const messages = this.exportMessages();
 
-		return { source, label, help, messages, gatewayAttrs };
+		const exportObj =  { source, label, help, messages, gatewayAttrs }
+
+		window.jetFormActionTypes.push( {
+			id: this.type,
+			name: this.label,
+			...exportObj
+		} );
+
+		return exportObj;
 	}
 
 

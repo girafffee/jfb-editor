@@ -1,8 +1,8 @@
 {
   "name": "jfb-editor",
-  "version": "1.0.6",
+  "version": "1.0.10",
   "description": "Components & helpful functions for Gutenberg editor",
-  "main": "./src/index.js",
+  "main": "./src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development --progress --hide-modules -w",
