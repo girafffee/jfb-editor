@@ -1,6 +1,6 @@
 {
   "name": "jfb-editor",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Components & helpful functions for Gutenberg editor",
   "main": "./src/index.js",
   "scripts": {
