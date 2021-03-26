@@ -1,52 +1,61 @@
-const path = require('path');
-const webpack = require('webpack');
+var path = require( 'path' )
+var webpack = require( 'webpack' )
+const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
-	name: 'js_bundle',
-	context: path.resolve(__dirname, 'src'),
-	entry: {
-		'main': './main.js',
-	},
+	entry: './src/main.js',
 	output: {
-		path: path.resolve( __dirname, 'dist' ),
-		filename: '[name].js'
-	},
-	resolve: {
-		modules: [
-			path.resolve(__dirname, 'src'),
-			'node_modules'
-		],
-		extensions: ['.js'],
-		alias: {
-			'@': path.resolve(__dirname, 'src'),
-			'bases': path.resolve(__dirname, 'src/js/bases/'),
-			'filters': path.resolve(__dirname, 'src/js/filters/'),
-			'modules': path.resolve(__dirname, 'src/js/modules/'),
-			'includes': path.resolve(__dirname, 'src/js/includes/'),
-			'blocks': path.resolve(__dirname, 'src/js/blocks/')
-		}
-	},
-	externals: {
-		jquery: 'jQuery'
-	},
-	plugins: [
-		new webpack.ProvidePlugin({
-			jQuery: 'jquery',
-			$: 'jquery'
-		})
-	],
-	optimization: {
-		splitChunks: {
-			chunks: 'all'
-		}
+		path: path.resolve( __dirname, './dist' ),
+		publicPath: '/dist/',
+		filename: 'build.js'
 	},
 	module: {
 		rules: [
 			{
+				test: /\.vue$/,
+				loader: 'vue-loader',
+
+			},
+			{
 				test: /\.js$/,
 				loader: 'babel-loader',
 				exclude: /node_modules/
-			}
+			},
+
 		]
-	}
+	},
+	plugins: [
+		new VueLoaderPlugin()
+	],
+	resolve: {
+		alias: {
+			'vue$': 'vue/dist/vue.esm.js'
+		},
+		extensions: [ '*', '.js', '.vue', '.json' ]
+	},
+	performance: {
+		hints: false
+	},
+	devtool: '#eval-source-map'
+}
+
+if ( process.env.NODE_ENV === 'production' ) {
+	module.exports.devtool = '#source-map'
+	// http://vue-loader.vuejs.org/en/workflow/production.html
+	module.exports.plugins = ( module.exports.plugins || [] ).concat( [
+		new webpack.DefinePlugin( {
+			'process.env': {
+				NODE_ENV: '"production"'
+			}
+		} ),
+		new webpack.optimize.UglifyJsPlugin( {
+			sourceMap: true,
+			compress: {
+				warnings: false
+			}
+		} ),
+		new webpack.LoaderOptionsPlugin( {
+			minimize: true
+		} )
+	] )
 }

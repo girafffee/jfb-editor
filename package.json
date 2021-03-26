@@ -1,27 +1,36 @@
 {
   "name": "jfb-editor",
-  "version": "1.0.10",
+  "version": "1.1.1",
   "description": "Components & helpful functions for Gutenberg editor",
   "main": "./src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development --progress --hide-modules -w",
-    "build": "webpack --mode production --progress --hide-modules"
+    "build": "webpack --mode production --progress --hide-modules -w"
   },
+  "author": "Oleksandr Ivanenko <sanko200065@gmail.com>",
+  "repository": "git@github.com:girafffee/jfb-editor.git",
+  "homepage": "https://github.com/girafffee/jfb-editor#readme",
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/plugin-transform-react-jsx": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
     "babel-loader": "^8.1.0",
+    "vue-loader": "^15.9.6",
+    "vue-template-compiler": "^2.6.12",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
   },
-  "repository": "git@github.com:girafffee/jfb-editor.git",
-  "author": "Oleksandr Ivanenko <sanko200065@gmail.com>",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
   "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/girafffee/jfb-editor/issues"
   },
-  "homepage": "https://github.com/girafffee/jfb-editor#readme"
+  "dependencies": {
+    "vue": "^2.6.12"
+  }
 }
