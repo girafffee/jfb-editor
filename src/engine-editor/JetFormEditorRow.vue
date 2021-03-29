@@ -2,13 +2,13 @@
 	<div class="jet-form-editor__row">
 		<div :class="labelClassObject">
 			{{ label }}
-			<div :class="helpClassObject">
+			<div :class="helpClassObject" v-if="this.$slots.helpLabel">
 				<slot name="helpLabel"></slot>
 			</div>
 		</div>
 		<div :class="controlClassObject">
 			<slot></slot>
-			<div :class="helpClassObject">
+			<div :class="helpClassObject" v-if="this.$slots.helpControl">
 				<slot name="helpControl"></slot>
 			</div>
 		</div>
