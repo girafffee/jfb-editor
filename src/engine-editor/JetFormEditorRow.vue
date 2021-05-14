@@ -12,6 +12,9 @@
 				<slot name="helpControl"></slot>
 			</div>
 		</div>
+		<div :class="helpClassObject" v-if="this.$slots.helpSide">
+			&nbsp;&nbsp;&nbsp;&nbsp;<slot name="helpSide"></slot>
+		</div>
 	</div>
 </template>
 
