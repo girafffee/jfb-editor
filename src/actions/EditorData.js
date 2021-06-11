@@ -52,11 +52,21 @@ class EditorData {
 
 		const exportObj =  { source, label, help, messages, gatewayAttrs }
 
-		window.jetFormActionTypes.push( {
+		const actionIndex = window.jetFormActionTypes.findIndex( type => this.type === type.id );
+		const actionData = {
 			id: this.type,
 			name: this.label,
 			...exportObj
-		} );
+		};
+
+		if ( -1 === actionIndex ) {
+			window.jetFormActionTypes.push( actionData );
+		} else {
+			window.jetFormActionTypes[ actionIndex ] = {
+				...window.jetFormActionTypes[ actionIndex ] ,
+				...exportObj
+			};
+		}
 
 		return exportObj;
 	}
